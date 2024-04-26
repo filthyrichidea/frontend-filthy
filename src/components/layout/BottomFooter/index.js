@@ -39,7 +39,7 @@ function BottomFooter() {
       <Container>
         <div className={styles.outer}>
           <div className={styles.copyright}>
-            <p>© 2023. Incfile.com All Rights Reserved.</p>
+            <p>© 2024. Filthy Rich Idea.com All Rights Reserved.</p>
           </div>
           <div className={styles.iconblock}>
             {socialLinks?.map((e, i) => (

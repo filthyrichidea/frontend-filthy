@@ -28,7 +28,7 @@ const StepTen = () => {
             <div className={styles.testimonialQuote}>
               I must admit that I was nervous to begin this process, however, I
               was able to easy maneuver my way throughout the website.
-              Incfile.com made my first time entrepreneurial experience as
+              Filthy Rich Idea.com made my first time entrepreneurial experience as
               peaceful one. I am beyond grateful and excited to start my
               journey. Thank you!
             </div>

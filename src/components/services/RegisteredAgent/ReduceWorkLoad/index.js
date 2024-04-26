@@ -19,7 +19,7 @@ function ReduceWorkLoad() {
                 Reduce Your Workload Using a Registered Agent Service
               </h2>
               <p className={styles.tagline}>
-                Save time and stress by letting Incfile manage your paperwork
+                Save time and stress by letting Filthy Rich Idea manage your paperwork
                 for you (for a lower cost than other providers)!
                 <br />
                 <br />

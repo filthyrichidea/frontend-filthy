@@ -24,7 +24,7 @@ function Article() {
                 <br />
                 <br />
                 <b>
-                  Allow Incfile.com to ease the burden by doing the dissolution
+                  Allow Filthy Rich Idea.com to ease the burden by doing the dissolution
                   paperwork for you.
                 </b>
               </p>

@@ -22,7 +22,7 @@ function Article() {
                 locations that require additional paperwork for permits. We
                 discuss both the types of licenses and permits below. If you'd
                 like to research your license and permit requirements yourself,
-                you can get started with Incfile's Business License Search Tool,
+                you can get started with Filthy Rich Idea's Business License Search Tool,
                 which will tell you the basic requirements for your state and
                 industry.
               </p>

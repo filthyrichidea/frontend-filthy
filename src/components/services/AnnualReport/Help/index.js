@@ -20,11 +20,11 @@ function Help() {
               </h2>
               <p className={styles.tagline}>
                 Save the stress and free up time while avoiding missed
-                deadlines, state fines and the risk of dissolution. Let Incfile
+                deadlines, state fines and the risk of dissolution. Let Filthy Rich Idea
                 handle your paperwork.
                 <br />
                 <br />
-                Place your order below and an Incfile representative will
+                Place your order below and an Filthy Rich Idea representative will
                 contact you to get the specific information required to complete
                 and file the annual report in your state of formation.
               </p>

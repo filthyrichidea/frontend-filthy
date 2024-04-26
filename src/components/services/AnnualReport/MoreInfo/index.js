@@ -34,7 +34,7 @@ function MoreInfo() {
     <div className={styles.moreInfoWrapper}>
       <Container className={styles.infoCardsWrapper}>
         <div className={styles.moreInfoTitle}>
-          Benefits of Filing Your Annual LLC Report with Incfile
+          Benefits of Filing Your Annual LLC Report with Filthy Rich Idea
         </div>
         <Row className="align-items-center justify-content-center mt-5">
           {cardData.map((card) => (

@@ -63,7 +63,7 @@ function FaqSection() {
             to get a business loan, renew your business license or file your
             business taxes. It can be cumbersome and time consuming to file a
             Certificate of Authority in every state in which you want to do
-            business, which is why Incfile has simplified the process. Simply
+            business, which is why Filthy Rich Idea has simplified the process. Simply
             complete our online Foreign Qualification form, and we’ll do the
             paperwork for you.
           </p>

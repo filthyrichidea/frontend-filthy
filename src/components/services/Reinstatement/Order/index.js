@@ -24,7 +24,7 @@ function Order() {
             <div className={styles.textblock}>
               <h2 className={styles.heading}>Ready to Get Reinstated?</h2>
               <p className={styles.tagline}>
-                Incfile can help you reinstate your dissolved business and get
+                Filthy Rich Idea can help you reinstate your dissolved business and get
                 back in good standing.
               </p>
             </div>

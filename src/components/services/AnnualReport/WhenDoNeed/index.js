@@ -29,7 +29,7 @@ function Need() {
                 late penalties, dissolution and loss of liability protection.
                 <br />
                 Avoid tiresome paperwork and the repercussions of noncompliance
-                by letting Incfile take care of the paperwork for you. Free up
+                by letting Filthy Rich Idea take care of the paperwork for you. Free up
                 your time to focus on what matters — your business.
               </p>
             </div>

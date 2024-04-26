@@ -19,7 +19,7 @@ function ReduceWorkLoad() {
                 Help to Obtain a Certificate of Good Standing
               </h2>
               <p className={styles.tagline}>
-                Save on stress and let Incfile take care of the paperwork for
+                Save on stress and let Filthy Rich Idea take care of the paperwork for
                 you (for a lower cost than other providers!)
                 <br />
                 <br />

@@ -42,7 +42,7 @@ function MoreInfo() {
           Steps to Dissolving Your LLC or Corporation
         </div>
         <p className={styles.moreInfoP}>
-          There are three key steps to dissolving a company. Incfile completes
+          There are three key steps to dissolving a company. Filthy Rich Idea completes
           these steps in a timely manner on your behalf, making an otherwise
           cumbersome process simple and stress-free.
         </p>

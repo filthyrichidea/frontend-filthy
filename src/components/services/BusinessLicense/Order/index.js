@@ -12,10 +12,10 @@ function Order() {
           <Col lg={7}>
             <div className={styles.textblock}>
               <h2 className={styles.heading}>
-                Incfile's Business License Research Package
+                Filthy Rich Idea's Business License Research Package
               </h2>
               <p className={styles.tagline}>
-                With Incfile's Business License Research Package, you'll have
+                With Filthy Rich Idea's Business License Research Package, you'll have
                 everything you need to apply for your licenses and meet the
                 requirements for your business.
               </p>

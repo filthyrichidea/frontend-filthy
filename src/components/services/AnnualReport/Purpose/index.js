@@ -27,7 +27,7 @@ function Purpose() {
                 <br />
                 Need to make changes to your business outside of the usual
                 annual reporting time? No problem! You can file an Articles of
-                Amendment form or have Incfile take care of it for you.
+                Amendment form or have Filthy Rich Idea take care of it for you.
               </p>
             </div>
           </Col>

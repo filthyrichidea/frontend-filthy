@@ -22,8 +22,8 @@ function HeroSection() {
               </h1>
               <h2 className={styles.tagline}>
                 Changing Your Registered Agent Is Easier, Simpler & Quicker with
-                Incfile Sometimes circumstances arise that require a Registered
-                Agent change. Let Incfile save you time and handle the
+                Filthy Rich Idea Sometimes circumstances arise that require a Registered
+                Agent change. Let Filthy Rich Idea save you time and handle the
                 paperwork.
               </h2>
               <div className={styles.button}>
@@ -46,7 +46,7 @@ function HeroSection() {
                 <p className={styles.text2}>
                   Join the <span className={styles.text3}>800,000+</span>{" "}
                   businesses that have chosen
-                  <span className={styles.text4}> Incfile</span> .
+                  <span className={styles.text4}> Filthy Rich Idea</span> .
                 </p>
               </div>
             </div>

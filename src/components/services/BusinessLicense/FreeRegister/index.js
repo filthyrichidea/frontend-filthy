@@ -36,7 +36,7 @@ function FreeRegister() {
                 </ul>
                 <br />
                 This is not an exhaustive list by any means, therefore, working
-                with Incfile to identify every situation is a key factor in
+                with Filthy Rich Idea to identify every situation is a key factor in
                 starting your business off right.
               </p>
             </div>

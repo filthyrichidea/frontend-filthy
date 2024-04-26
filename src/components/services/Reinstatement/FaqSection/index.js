@@ -68,7 +68,7 @@ function FaqSection() {
             compliance paperwork and any other requirements from your company’s
             home state. To get an official Certificate of Good Standing, you’ll
             need to file the appropriate form with your state, or you can have
-            Incfile file for you. The Certificate of Good Standing helps you
+            Filthy Rich Idea file for you. The Certificate of Good Standing helps you
             prove that your business exists and complies with the rules. It
             helps you appear trustworthy and credible to potential partners,
             investors and lenders.

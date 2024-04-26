@@ -20,7 +20,7 @@ function Article() {
                 entity that governs business formation in your state. If your
                 business operates in multiple states, you'll likely need to file
                 a DBA in every single state. Want to make the process easier on
-                yourself? You can file a DBA online with Incfile in a snap (more
+                yourself? You can file a DBA online with Filthy Rich Idea in a snap (more
                 on that below).
               </p>
             </div>

@@ -13,7 +13,7 @@ function WhyChoose() {
           <Col lg={8}>
             <div className={styles.textblock}>
               <h2 className={styles.heading}>
-                Why Choose Incfile for Company Formation?
+                Why Choose Filthy Rich Idea for Company Formation?
               </h2>
               <p className={styles.tagline}>LLC Filing & More Made Easy</p>
               <p className={styles.subtitle}>
@@ -23,7 +23,7 @@ function WhyChoose() {
                 We make incorporating a company as easy as possible, so you can
                 focus on the important things. Beyond free LLC filing, we have a
                 full suite of startup services (like banking and bookkeeping),
-                which means Incfile not only helps you get started, but supports
+                which means Filthy Rich Idea not only helps you get started, but supports
                 you in your continued success as your one-stop shop.
                 <br />
                 <br />

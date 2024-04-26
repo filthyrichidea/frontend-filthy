@@ -20,7 +20,7 @@ function HeroSection() {
                 Get Your Registered Agent Service Free for the First Year
               </h1>
               <h2 className={styles.tagline}>
-                When You Form Your Business with Incfile Avoid the stress of
+                When You Form Your Business with Filthy Rich Idea Avoid the stress of
                 managing your business’s documentation on your own by hiring a
                 trustworthy and affordable Registered Agent.
               </h2>
@@ -44,7 +44,7 @@ function HeroSection() {
                 <p className={styles.text2}>
                   Join the <span className={styles.text3}>800,000+</span>{" "}
                   businesses that have chosen
-                  <span className={styles.text4}> Incfile</span> .
+                  <span className={styles.text4}> Filthy Rich Idea</span> .
                 </p>
               </div>
             </div>

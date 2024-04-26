@@ -26,7 +26,7 @@ function HeroSection() {
                   — For All Business Entities
                 </b>{" "}
                 <br /> Lighten your workload and ensure your business stays
-                compliant by letting Incfile handle your annual report filing.
+                compliant by letting Filthy Rich Idea handle your annual report filing.
               </p>
               <div className={styles.button}>
                 <div className={styles.btnblock}>

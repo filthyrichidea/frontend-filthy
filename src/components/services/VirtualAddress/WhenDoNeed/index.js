@@ -50,7 +50,7 @@ function Need() {
                 States Where Virtual Address Service Is Available
               </h2>
               <p className={styles.tagline}>
-                Incfile currently provides virtual mailboxes in 27 different
+                Filthy Rich Idea currently provides virtual mailboxes in 27 different
                 states across the country, providing you with the flexibility
                 you need to run your business in the location that makes the
                 most sense for you.

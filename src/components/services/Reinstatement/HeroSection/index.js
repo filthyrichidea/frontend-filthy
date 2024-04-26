@@ -21,7 +21,7 @@ function HeroSection() {
                 File an Order of Reinstatement Quickly and Easily
               </h1>
               <p className={styles.tagline}>
-                Incfile can help you restore your Good Standing status with your
+                Filthy Rich Idea can help you restore your Good Standing status with your
                 state and restart operations in a fraction of the time (and
                 money!) it takes to start a new company.
               </p>

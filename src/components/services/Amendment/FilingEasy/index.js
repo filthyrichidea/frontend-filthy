@@ -48,7 +48,7 @@ function FilingEasy() {
                 mental energy.
                 <br />
                 <br />
-                Incfile offers fast and affordable professional filing services
+                Filthy Rich Idea offers fast and affordable professional filing services
                 so your Articles of Amendment will be out of sight and out of
                 mind. Life is short — why spend it doing paperwork?
                 <br />

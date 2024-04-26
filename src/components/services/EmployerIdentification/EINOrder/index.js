@@ -20,7 +20,7 @@ function EINOrder() {
                 <br />
                 If you would like to use our services to facilitate the filing
                 of your Tax ID / EIN please place the order and a representative
-                from Incfile will contact you to obtain specific information
+                from Filthy Rich Idea will contact you to obtain specific information
                 required to complete and file the Tax ID / EIN in your state of
                 formation.
               </p>

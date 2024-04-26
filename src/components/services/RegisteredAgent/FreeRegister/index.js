@@ -10,12 +10,12 @@ function FreeRegister() {
           <Col lg={7}>
             <div className={styles.textblock}>
               <h2 className={styles.heading}>
-                Why Does Incfile Offer a Free Registered Agent?
+                Why Does Filthy Rich Idea Offer a Free Registered Agent?
               </h2>
               <p className={styles.tagline}>
                 In addition to offering free LLC and other business formation,
                 you’ll get your first year’s Registered Agent free too when you
-                start a business with Incfile.
+                start a business with Filthy Rich Idea.
                 <br />
                 <br />
                 Unlike other business formation specialists, our service isn’t

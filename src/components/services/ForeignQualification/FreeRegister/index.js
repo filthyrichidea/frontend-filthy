@@ -30,7 +30,7 @@ function FreeRegister() {
                 <br />
                 <br />
                 <b>
-                  We can take care of the details. Let Incfile help you file
+                  We can take care of the details. Let Filthy Rich Idea help you file
                   your Foreign Qualification today!
                 </b>
               </p>

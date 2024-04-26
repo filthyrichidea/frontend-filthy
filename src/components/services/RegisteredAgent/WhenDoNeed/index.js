@@ -19,7 +19,7 @@ function Need() {
                 Why Use a Registered Agent Service?
               </h2>
               <p className={styles.tagline}>
-                Registered Agent services like the one offered by Incfile help
+                Registered Agent services like the one offered by Filthy Rich Idea help
                 you avoid the hassles and inconvenience of managing all of your
                 own documentation from the state.
                 <br />
@@ -31,7 +31,7 @@ function Need() {
                 <br />
                 When you use a Registered Agent service, any official legal or
                 tax correspondence will be forwarded to your personal, private
-                contact address. Incfile’s Registered Agent service also helps
+                contact address. Filthy Rich Idea’s Registered Agent service also helps
                 you stay on top of deadlines (such as required annual reports)
                 to keep your business in good standing.
                 <br />

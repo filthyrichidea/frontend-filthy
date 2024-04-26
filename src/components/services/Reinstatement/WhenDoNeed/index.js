@@ -16,13 +16,13 @@ function Need() {
           <Col lg={8}>
             <div className={styles.textblock}>
               <h2 className={styles.heading}>
-                Incfile’s Reinstatement Service Is Here to Help
+                Filthy Rich Idea’s Reinstatement Service Is Here to Help
               </h2>
               <p className={styles.tagline}>
                 If your business has been dissolved because of non-compliance,
                 you can restore your Good Standing and restart operations by
                 filing an order of reinstatement with your state of formation.
-                Incfile’s Reinstatement service takes care of the paperwork for
+                Filthy Rich Idea’s Reinstatement service takes care of the paperwork for
                 you, making sure you follow the reinstatement procedures of your
                 state.
               </p>

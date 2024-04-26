@@ -38,7 +38,7 @@ const StepNine = ({ formik, members, shareholders, llc }) => {
       <DetailCard title="Agent Info">
         {formik.values?.agentFree === 0 ? (
           <p className={styles.detailCardDesciption}>
-            You have selected Incfile to provide you with a Registered Agent
+            You have selected Filthy Rich Idea to provide you with a Registered Agent
             <br />
             <b>First Year Free</b>
           </p>
@@ -137,7 +137,7 @@ const StepNine = ({ formik, members, shareholders, llc }) => {
                         ) : (
                           <>
                             <p className={styles.detailCardDesciption}>
-                              You have selected for Incfile to provide you with
+                              You have selected for Filthy Rich Idea to provide you with
                               a company address.
                             </p>
                           </>

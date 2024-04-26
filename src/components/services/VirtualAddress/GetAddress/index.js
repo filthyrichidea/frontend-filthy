@@ -10,7 +10,7 @@ function GetAddress() {
     <div className={styles.getAddressWrapper}>
       <div className={styles.getAddressTitle}>Get Your Virtual Address Now</div>
       <p className={styles.getAddressP}>
-        Set Yourself Up for Success with Incfile
+        Set Yourself Up for Success with Filthy Rich Idea
       </p>
       <div className={styles.getAddressCard}>
         <div className={styles.addressFormLabel}>State*</div>

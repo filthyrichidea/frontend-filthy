@@ -21,7 +21,7 @@ function HeroSection() {
             <div className={styles.textblock}>
               <h1 className={styles.heading}>
                 Virtual Address - Virtual Mailbox and Mail Scanning Service from
-                Incfile
+                Filthy Rich Idea
               </h1>
               <h2 className={styles.tagline}>
                 Get a Fixed Street Address and Access to Your Correspondence

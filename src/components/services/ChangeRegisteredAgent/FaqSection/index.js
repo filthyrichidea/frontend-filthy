@@ -30,7 +30,7 @@ function FaqSection() {
           <p>
             You’ll always need to fill out a “Change of Registered Agent” form,
             but the processing fee and the information needed varies by state -
-            which is why it pays to work with Incfile. Check out everything you
+            which is why it pays to work with Filthy Rich Idea. Check out everything you
             need to know about Registered Agents and make sure to explore your
             state’s specific information.
           </p>

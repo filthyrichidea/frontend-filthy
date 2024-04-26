@@ -22,7 +22,7 @@ function HeroSection() {
               </h1>
               <h2 className={styles.tagline}>
                 Doing business under a name other than your own? You’ll probably
-                need a DBA. Luckily, Incfile can help.
+                need a DBA. Luckily, Filthy Rich Idea can help.
               </h2>
               <div className={styles.button}>
                 <div className={styles.btnblock}>

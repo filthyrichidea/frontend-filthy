@@ -22,7 +22,7 @@ function HeroSection() {
               </h1>
               <h2 className={styles.tagline}>
                 Join Over <span className={styles.tagline2}>800,000</span>{" "}
-                Businesses Owners with Incfile Since{" "}
+                Businesses Owners with Filthy Rich Idea Since{" "}
                 <span className={styles.tagline3}>2004</span>
               </h2>
               <div className={styles.button}>

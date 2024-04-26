@@ -32,7 +32,7 @@ function FreeRegister() {
                 </ul>
                 <br />
                 To get a Certificate of Good Standing, you’ll need to file the
-                appropriate form with your state, or Incfile can do it for you.
+                appropriate form with your state, or Filthy Rich Idea can do it for you.
               </p>
             </div>
           </Col>

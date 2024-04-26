@@ -9,7 +9,7 @@ function FreeRegister() {
         <Row className={styles.row}>
           <Col lg={7}>
             <div className={styles.textblock}>
-              <h2 className={styles.heading}>Why File a DBA with Incfile?</h2>
+              <h2 className={styles.heading}>Why File a DBA with Filthy Rich Idea?</h2>
               <p className={styles.tagline}>
                 Our DBA package offers four key benefits that business owners
                 should pay attention to.

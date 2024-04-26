@@ -67,7 +67,7 @@ const StepFour = ({ formik }) => {
               <img src={tickIcon} alt="tick" />
             </div>
             <div className={styles.listText}>
-              Only Incfile offers 1 full year of Registered Agent service FREE
+              Only Filthy Rich Idea offers 1 full year of Registered Agent service FREE
               with every new business formation order - a $119.00 value!
             </div>
           </div>

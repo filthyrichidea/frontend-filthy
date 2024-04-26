@@ -44,7 +44,7 @@ function HeroSection() {
                 <p className={styles.text2}>
                   Join the <span className={styles.text3}>800,000+</span>{" "}
                   businesses that have chosen
-                  <span className={styles.text4}> Incfile</span> .
+                  <span className={styles.text4}> Filthy Rich Idea</span> .
                 </p>
               </div>
               <div className={styles.ratingblock}>

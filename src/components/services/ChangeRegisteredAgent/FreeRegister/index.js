@@ -26,7 +26,7 @@ function FreeRegister() {
                 Registered Agent service going forward?
                 <br />
                 <br />
-                Either way, you can save time and stress by letting Incfile
+                Either way, you can save time and stress by letting Filthy Rich Idea
                 manage the agent change paperwork for you.
               </p>
             </div>
