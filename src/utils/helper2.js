@@ -4488,6 +4488,29 @@ outpatient care center.
       link: null,
     },
   ],
+  organizationDo2: [
+    {
+      title: "Started a new business.",
+    },
+    {
+      title: " Already have a business and need to hire employee(s).",
+    },
+    {
+      title: "Banking purposes.",
+    },
+    {
+      title: " Changed type of organization/entity.",
+    },
+    {
+      title: "Purchased a business that is already in operation.",
+    },
+    {
+      title: "Created a trust",
+    },
+    {
+      title: " Created a pension plan ",
+    },
+  ],
   protectTradeMark: [
     {
       title: `Active Monitoring

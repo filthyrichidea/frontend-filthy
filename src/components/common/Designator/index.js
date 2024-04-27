@@ -34,7 +34,7 @@ const Designator = ({ formik, designator, setDesignator, business }) => {
       } else if (formik.values.entityType.value === "Corporation") {
         setDesignator(copDesignator)
       } else {
-        setDesignator([])
+        setDesignator(copDesignator)
       }
     }
   }, [formik?.values?.entityType?.value, formik?.values?.entityType])

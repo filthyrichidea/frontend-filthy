@@ -179,7 +179,14 @@ function ArticlesOfAmendment() {
       businessName: formData?.bushinessName || "",
       slogan: formData?.slogan || "",
       markTags: formData?.markTags || "",
+      sound: formData?.sound || "",
+      proofSound: formData?.proofSound || "",
+      soundq1: formData?.soundq1 || "",
+      soundq2: formData?.soundq2 || "",
+      soundq3: formData?.soundq3 || "",
+      soundq4: formData?.soundq4 || "",
       usingMark: formData?.usingMark || "yes",
+      usingMark2: formData?.usingMark2 || "yes",
       agree: formData?.agree || "",
       ownsTradeMark: formData?.ownsTradeMark || "",
       trademarkCompany: formData?.trademarkCompany || "",
@@ -203,9 +210,16 @@ function ArticlesOfAmendment() {
         then: Yup.string().required("Required"),
       }),
       streetAddress: Yup.string().required("Required"),
+      streetAddress2: Yup.string().required("Required"),
+
       city: Yup.string().required("Required"),
+      city2: Yup.string().required("Required"),
       // address: Yup.string().required("Required"),
       postal_code: Yup.string()
+        .required("Required")
+        .matches(/^[0-9]{5}(?:-[0-9]{4})?$/, "Invalid postal code")
+        .max(5, "Max five characters"),
+      postal_code2: Yup.string()
         .required("Required")
         .matches(/^[0-9]{5}(?:-[0-9]{4})?$/, "Invalid postal code")
         .max(5, "Max five characters"),
@@ -219,6 +233,9 @@ function ArticlesOfAmendment() {
         value: Yup.string().required("Required"),
       }),
       state: Yup.object().shape({
+        value: Yup.string().required("Required"),
+      }),
+      state2: Yup.object().shape({
         value: Yup.string().required("Required"),
       }),
       companyName: Yup.string().required("Required"),
@@ -268,6 +285,58 @@ function ArticlesOfAmendment() {
       })
     },
   })
+
+  const anotheroptions = [
+    {
+      label: "Individual",
+      id: 10,
+      value: "Individual",
+      price: 20,
+      priceData: [],
+    },
+    {
+      label: "Sole Proprietorship",
+      id: 11,
+      value: "Sole Proprietorship",
+      price: 20,
+      priceData: [],
+    },
+    {
+      label: "Partnership",
+      id: 12,
+      value: "Partnership",
+      price: 20,
+      priceData: [],
+    },
+    {
+      label: "Limited Partnership",
+      id: 13,
+      value: "Limited Partnership",
+      price: 20,
+      priceData: [],
+    },
+    {
+      label: "Joint Venture",
+      id: 14,
+      value: "Joint Venture",
+      price: 20,
+      priceData: [],
+    },
+    {
+      label: "Trust",
+      id: 15,
+      value: "Trust",
+      price: 20,
+      priceData: [],
+    },
+    {
+      label: "Estate",
+      id: 16,
+      value: "Estate",
+      price: 20,
+      priceData: [],
+    },
+  ]
   return (
     <div className={styles.wrap}>
       <Container>
@@ -355,7 +424,7 @@ function ArticlesOfAmendment() {
               </div>
             </div>
             <div className={styles.companyinformation}>
-              <h2 className={styles.title}>Company Information</h2>
+              <h2 className={styles.title}>Entity Information</h2>
               <div className={styles.cardblock}>
                 <div className={styles.card}>
                   <img src={icon} alt="icons" />
@@ -375,7 +444,7 @@ function ArticlesOfAmendment() {
                   <div className={styles.form1}>
                     <p className={styles.subtitle}>Entity Type *</p>
                     <Select
-                      options={entityOptions}
+                      options={[...entityOptions, ...anotheroptions]}
                       placeholder="Select Entity Type"
                       className="react-select-container"
                       classNamePrefix="react-select"
@@ -473,11 +542,43 @@ function ArticlesOfAmendment() {
                         />
                       </div>
                     )}
+
+                  <div className={`mt-3 ${styles.tradeMarkSubtitle}`}>
+                    <div className={`mt-3 ${styles.tradeMarkSubtitle}`}>
+                      Is a company filing this trademark application?
+                    </div>{" "}
+                  </div>
+                  <div className={`ms-3 my-4 ${styles.radioCheckBoxWapper}`}>
+                    <Form.Check
+                      inline
+                      label="Yes"
+                      name="checkbox123"
+                      checked={formik.values.usingMark2 === "yes"}
+                      type="radio"
+                      onChange={() =>
+                        formik.setValues({
+                          ...formik.values,
+                          usingMark2: "yes",
+                        })
+                      }
+                      className="me-5"
+                    />
+                    <Form.Check
+                      inline
+                      label="No"
+                      name="checkbox123"
+                      checked={formik.values.usingMark2 === "no"}
+                      type="radio"
+                      onChange={() =>
+                        formik.setValues({ ...formik.values, usingMark2: "no" })
+                      }
+                    />
+                  </div>
                 </form>
               </div>
             </div>
             <div className={styles.companyaddress}>
-              <h2 className={styles.title}>Company Address</h2>
+              <h2 className={styles.title}>Mailing Address</h2>
               <div className={styles.formblock}>
                 <form className={styles.form}>
                   <div className={styles.formInpWrapper}>
@@ -569,6 +670,101 @@ function ArticlesOfAmendment() {
                 </form>
               </div>
             </div>
+
+            <div className={styles.companyaddress}>
+              <h2 className={styles.title}>Domicile Address</h2>
+              <div className={styles.formblock}>
+                <form className={styles.form}>
+                  <div className={styles.formInpWrapper}>
+                    <p className={styles.subtitle}>Street Address *</p>
+                    <input
+                      placeholder="Street Address *"
+                      name="streetAddress2"
+                      autoComplete="off"
+                      type="text"
+                      className={styles.input}
+                      value={formik.values.streetAddress2}
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
+                    />
+                    <span className="error-message">
+                      {formik.errors.streetAddress2}
+                    </span>
+                  </div>
+                  <div className={styles.formInpWrapper}>
+                    <p className={styles.subtitle}>Address (Cont)</p>
+                    <input
+                      placeholder="Address (Cont)"
+                      name="address2"
+                      autoComplete="off"
+                      type="text"
+                      className={styles.input}
+                      value={formik.values.address2}
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
+                    />
+                    <span className="error-message">
+                      {formik.errors.address2}
+                    </span>
+                  </div>
+                  <div className={styles.formInpWrapper}>
+                    <p className={styles.subtitle}>City *</p>
+                    <span className="error-message">
+                      <input
+                        placeholder="City *"
+                        name="city2"
+                        autoComplete="off"
+                        type="text"
+                        className={styles.input}
+                        value={formik.values.city2}
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                      />
+                      {formik.errors.city2}
+                    </span>
+                  </div>
+                  <div className={styles.formInpWrapper}>
+                    <p className={styles.subtitle}>Select State *</p>
+                    <Select
+                      options={companyAddressOptions}
+                      placeholder="Select State"
+                      className="react-select-container"
+                      classNamePrefix="react-select"
+                      value={formik.values.state2}
+                      onChange={(e) => {
+                        formik.setValues({
+                          ...formik.values,
+                          state2: e,
+                        })
+                      }}
+                      onBlur={formik.handleBlur}
+                      name="state2"
+                      id="state"
+                    />
+                    <span className="error-message">
+                      {formik.errors.state2?.value}
+                    </span>
+                  </div>
+                  <div className={styles.formInpWrapper}>
+                    <p className={styles.subtitle}>Zip Code *</p>
+                    <input
+                      placeholder="Zip Code *"
+                      name="postal_code2"
+                      autoComplete="off"
+                      type="text"
+                      className={styles.inputzip}
+                      value={formik.values.postal_code2}
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
+                    />
+                    <span className="error-message">
+                      {formik.errors.postal_code2}
+                    </span>
+                  </div>
+                </form>
+              </div>
+            </div>
+
             <DetailCard title="Trademark Information">
               <div
                 className={`${styles.tradeMarkSubtitle} d-flex align-items-center justify-content-between`}
@@ -669,6 +865,29 @@ function ArticlesOfAmendment() {
                       <p>Design/Logo</p>
                     </div>
                   </div>
+                  <div
+                    className={styles.tabBtn}
+                    role="button"
+                    onClick={() =>
+                      formik.setValues({
+                        ...formik.values,
+                        sound: "",
+                        activeTab: 3,
+                      })
+                    }
+                    tabIndex={0}
+                  >
+                    <div>
+                      <Form.Check
+                        inline
+                        name="sound"
+                        checked={formik.values.activeTab === 3 ? "checked" : ""}
+                      />
+                    </div>
+                    <div>
+                      <p>Sound</p>
+                    </div>
+                  </div>
                 </div>
                 {formik.values.activeTab === 0 ? (
                   <div className={styles.tabsContentWrapper}>
@@ -719,6 +938,128 @@ function ArticlesOfAmendment() {
                       <div className={styles.tradeMarkLogoExample}>
                         Example:{" "}
                         <img className="ms-2" src={exampleLogo} alt="" />
+                      </div>
+                    </div>
+                  </div>
+                ) : formik.values.activeTab === 3 ? (
+                  <div className="mt-3">
+                    <InputField
+                      label={`Click on the "Browse/Choose File" button to select the image/sound/motion file`}
+                      type="file"
+                      sound={true}
+                      id="inpFile2"
+                      placeholder="Select "
+                      name="sound"
+                      onChange={(e) => {
+                        formik.setValues({
+                          ...formik.values,
+                          sound: e.target.files,
+                        })
+                      }}
+                    />
+                    {formik?.values?.sound.length > 0 && (
+                      <div>{formik.values?.sound[0]?.name}</div>
+                    )}
+                    <div>
+                      <div
+                        className={`${styles.tradeMarkSubtitle} d-flex align-items-center justify-content-between mt-4`}
+                      >
+                        Additional Statement
+                      </div>
+                      <ul>
+                        <li>Claim of prior registration(s)</li>
+                        <li>Translation</li>
+                        <li>Transliteration</li>
+                        <li>Consent of individual identified in mark</li>
+                        <li>Concurrent use claim</li>
+                      </ul>
+                      <div>
+                        <small>
+                          <b>Note</b> You are not required to enter any other
+                          statement(s) at the time of filing; however, you may
+                          be required to add a statement(s) to the record during
+                          examination of the application. If you are unsure
+                          whether you should make such a statement, besides
+                          those specifically identified above, the examining
+                          attorney assigned to your application will issue a
+                          requirement, if appropriate.
+                        </small>
+                      </div>
+                    </div>
+                    <div className="mt-4">
+                      <InputField
+                        label={`PLEASE UPLOAD PROOF OF USE.`}
+                        type="file"
+                        sound={true}
+                        id="inpFile3"
+                        placeholder="Select "
+                        name="proofSound"
+                        onChange={(e) => {
+                          formik.setValues({
+                            ...formik.values,
+                            proofSound: e.target.files,
+                          })
+                        }}
+                      />
+                      {formik?.values?.proofSound?.length > 0 && (
+                        <div>{formik.values?.proofSound[0]?.name}</div>
+                      )}
+
+                      <div className="mt-2">
+                        <InputField
+                          label="If your specimen consists of a webpage, provide the webpage URL:"
+                          name="soundq1"
+                          value={formik.values.soundq1}
+                          error={formik.errors.soundq1}
+                          onChange={formik.handleChange}
+                          type="text"
+                          placeholder="Url
+
+                        "
+                        />
+                      </div>
+                      <div className="mt-2">
+                        <InputField
+                          label="Describe the specimen that was uploaded."
+                          name="soundq2"
+                          value={formik.values.soundq2}
+                          error={formik.errors.soundq2}
+                          onChange={formik.handleChange}
+                          type="text"
+                          placeholder="Type here
+
+                        "
+                        />
+                      </div>
+                      <div className="mt-2">
+                        <InputField
+                          type="date"
+                          name="soundq3"
+                          value={formik.values.soundq3}
+                          onChange={(e) =>
+                            formik.setValues({
+                              ...formik.values,
+                              soundq3: e.target.value,
+                            })
+                          }
+                          label={"Date of first use of mark anywhere"}
+                          placeholder="Type here"
+                        />
+                      </div>
+                      <div className="mt-2">
+                        <InputField
+                          type="date"
+                          name="soundq4"
+                          value={formik.values.soundq4}
+                          onChange={(e) =>
+                            formik.setValues({
+                              ...formik.values,
+                              soundq4: e.target.value,
+                            })
+                          }
+                          label={"Date of first use of mark in commerce:"}
+                          placeholder="Type here"
+                        />
                       </div>
                     </div>
                   </div>
@@ -1151,7 +1492,14 @@ function ArticlesOfAmendment() {
               <div className={`mt-5 ${styles.agreeWithPolicy}`}>
                 <Form.Check
                   inline
-                  label="I Agree To The Legal Statement And Cancellation Policy."
+                  label={
+                    <a
+                      href="https://filthyrichidea.com/fri-policy-agreements/"
+                      target="_blank"
+                    >
+                      I Agree To The Trademark Policy.
+                    </a>
+                  }
                   checked={formik.values.agree}
                   onChange={() =>
                     formik.setValues({
@@ -1165,7 +1513,7 @@ function ArticlesOfAmendment() {
               </div>
             </DetailCard>
 
-            {(singleService?.standardFees === 0 ||
+            {/* {(singleService?.standardFees === 0 ||
               singleService?.standardFees) && (
               <div className={styles.detailCardWrapper}>
                 <DetailCard title="State Filing Time">
@@ -1336,7 +1684,7 @@ function ArticlesOfAmendment() {
                   </div>
                 </DetailCard>
               </div>
-            )}
+            )} */}
 
             <div className={styles.nextBtnWrapper}>
               <Button

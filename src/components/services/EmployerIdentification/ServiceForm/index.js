@@ -156,7 +156,9 @@ function ArticlesOfAmendment() {
       },
       newCompanyZipcode: formData?.newCompanyZipcode || "",
       einNumberType: formData?.einNumberType || "SSN",
+      question4: formData?.question4 || "No",
       einNumber: formData?.einNumber || "",
+      question4einNumber: formData?.question4einNumber || "",
       foreignIndividual:
         formData?.foreignIndividual === false
           ? false
@@ -164,19 +166,36 @@ function ArticlesOfAmendment() {
           ? true
           : false,
       organizationDo: formData?.organizationDo || "",
+      organizationDo2: formData?.organizationDo2 || "",
+      noOfEmp: formData?.noOfEmp || "",
+      question1:
+        formData?.question1 === false
+          ? false
+          : formData?.question1 === true
+          ? true
+          : false,
+      question2: formData?.question2 || " ",
       newBusinessPurpose: formData?.newBusinessPurpose || "",
       activeTab2: formData?.activeTab2 || 0,
     },
     validationSchema: Yup.object({
       companyName: Yup.string().required("Required"),
+      noOfEmp: Yup.string().required("Required"),
       organizationDo: Yup.string().required("Required"),
+      organizationDo2: Yup.string().required("Required"),
       newBusinessPurpose: Yup.string().required("Required"),
+      question2: Yup.string().required("Required"),
 
       streetAddress: Yup.string().required("Required"),
       city: Yup.string().required("Required"),
 
       einNumber: Yup.string().when("foreignIndividual", {
         is: false,
+        then: Yup.string().required("Required"),
+      }),
+
+      question4einNumber: Yup.string().when("question4", {
+        is: "Yes",
         then: Yup.string().required("Required"),
       }),
       postal_code: Yup.string()
@@ -233,6 +252,36 @@ function ArticlesOfAmendment() {
     },
   })
 
+  const anotheroptions = [
+    {
+      label: "Sole Proprietorship",
+      id: 11,
+      value: "Sole Proprietorship",
+      price: 20,
+      priceData: [],
+    },
+    {
+      label: "Partnership",
+      id: 12,
+      value: "Partnership",
+      price: 20,
+      priceData: [],
+    },
+    {
+      label: "Church",
+      id: 15,
+      value: "Church",
+      price: 20,
+      priceData: [],
+    },
+    {
+      label: "Estate",
+      id: 16,
+      value: "Estate",
+      price: 20,
+      priceData: [],
+    },
+  ]
   return (
     <div className={styles.wrap}>
       <Container>
@@ -329,7 +378,7 @@ function ArticlesOfAmendment() {
                   <div className={styles.form1}>
                     <p className={styles.subtitle}>Entity Type *</p>
                     <Select
-                      options={entityOptions}
+                      options={[...entityOptions, ...anotheroptions]}
                       placeholder="Select Entity Type"
                       className="react-select-container"
                       classNamePrefix="react-select"
@@ -450,6 +499,188 @@ function ArticlesOfAmendment() {
                           />
                         </div>
                       )}
+                  </div>
+
+                  <div>
+                    <p className={`mt-5 ${styles.subtitle}`}>
+                      Choose one reason that best describes why you are applying
+                      for an EIN. <br />
+                    </p>
+                    <p className="error-message">
+                      {formik.errors.organizationDo2}
+                    </p>
+                  </div>
+                  <div
+                    className={`ms-3 my-3 ${styles.ssnCheckWrapper} d-flex align-items-center flex-wrap justify-content-flex-start`}
+                  >
+                    {einData?.organizationDo2?.map((item, index) => (
+                      <div key={index} style={{ width: "100%" }}>
+                        <Form.Check
+                          inline
+                          key={index}
+                          value={item?.title}
+                          label={
+                            <>
+                              <ButtonToolbar>
+                                <OverlayTrigger
+                                  placement="top"
+                                  overlay={<Tooltip>{item?.tooltip}</Tooltip>}
+                                >
+                                  <a
+                                    href={item?.link ? item?.link : "/"}
+                                    className="d-block"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                  >
+                                    {item?.title}
+                                  </a>
+                                </OverlayTrigger>
+                              </ButtonToolbar>
+                            </>
+                          }
+                          type="radio"
+                          checked={
+                            formik.values?.organizationDo2 === item.title
+                              ? true
+                              : false
+                          }
+                          onChange={(el) =>
+                            formik.setValues({
+                              ...formik.values,
+                              organizationDo2: el?.target.value,
+                            })
+                          }
+                          name="organizationDo2"
+                          className="mb-3 me-5 d-block"
+                          // style={{ flex: "0 0 40%" }}
+                          style={{ display: "block" }}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                  <div>
+                    <InputField
+                      name="noOfEmp"
+                      type="number"
+                      label={
+                        "Highest number of employees expected in the next 12 months (enter -0- if none)."
+                      }
+                      onChange={formik.handleChange}
+                      value={formik.values.noOfEmp}
+                      error={formik?.errors?.noOfEmp}
+                    />
+                  </div>
+                  <div className={`mb-4 ${styles.inpCheckWrapper}`}>
+                    <Form.Check
+                      inline
+                      checked={formik.values.question1}
+                      value={formik.values.question1}
+                      onChange={(e) =>
+                        e.target.checked
+                          ? formik.setValues({
+                              ...formik.values,
+                              question1: true,
+                            })
+                          : formik.setValues({
+                              ...formik.values,
+                              question1: false,
+                            })
+                      }
+                      label="If you expect your employment tax liability to be $1,000 or less in a full calendar year and want to file Form 944 annually instead of Forms 941 quarterly, check here. (Your employment tax liability will generally be $1,000 or less if you expect to pay $5,000 or less, $6,536 or less if you’re in a U.S. territory, in total wages.) If you don’t check this box, you must file Form 941 for every quarter"
+                      name="question1"
+                      type="checkbox"
+                      className="me-5"
+                    />
+                  </div>
+                  <div>
+                    <InputField
+                      name="question2"
+                      type="text"
+                      label={
+                        "Indicate principal line of merchandise sold, specific construction work done, products produced, or services provided."
+                      }
+                      onChange={formik.handleChange}
+                      value={formik.values.question2}
+                      error={formik?.errors?.question2}
+                    />
+                  </div>
+                  <div>
+                    {
+                      <>
+                        <p className={`mt-5 ${styles.subtitle}`}>
+                          Has the applicant entity shown on line 1 ever applied
+                          for and received an EIN?
+                        </p>
+                        <div className={`ms-3 my-3 ${styles.ssnCheckWrapper}`}>
+                          <Form.Check
+                            inline
+                            label="Yes"
+                            name="checkbox2232322321234"
+                            type="radio"
+                            className="me-5"
+                            onChange={() =>
+                              formik.setValues({
+                                ...formik.values,
+                                question4: "Yes",
+                                question4einNumber: "",
+                              })
+                            }
+                            checked={
+                              formik.values?.question4 === "Yes" ? true : false
+                            }
+                          />
+                          <Form.Check
+                            inline
+                            label="NO"
+                            name="checkbox2232322321234"
+                            type="radio"
+                            onChange={() =>
+                              formik.setValues({
+                                ...formik.values,
+                                question4: "No",
+                                question4einNumber: "",
+                              })
+                            }
+                            checked={
+                              formik.values?.question4 === "No" ? true : false
+                            }
+                          />
+                        </div>
+                        {formik.values?.question4 === "Yes" && (
+                          <div className={styles.inpFieldSSn}>
+                            <p>Add previous EIN</p>
+                            <ReactInputMask
+                              mask="99-9999999"
+                              name="question4einNumber"
+                              maskChar=""
+                              className="custom-input"
+                              onChange={(e) => {
+                                if (formik.values?.question4 === "Yes") {
+                                  if (
+                                    !e.target.value.startsWith("9") &&
+                                    formik.values.question4einNumber.length ===
+                                      0
+                                  ) {
+                                    return formik.setErrors({
+                                      question4einNumber:
+                                        "Number should start with 9 ",
+                                    })
+                                  }
+                                }
+                                formik.setValues({
+                                  ...formik.values,
+                                  question4einNumber: e.target.value,
+                                })
+                              }}
+                              value={formik.values?.question4einNumber}
+                            />
+                            <span className="error-message">
+                              {formik.errors.question4einNumber}
+                            </span>
+                          </div>
+                        )}
+                      </>
+                    }
                   </div>
                 </form>
               </div>
@@ -1071,11 +1302,11 @@ function ArticlesOfAmendment() {
                       </div>
                     )}
                   </div>
-                  <div className={styles.detailCardDesciption}>
+                  {/* <div className={styles.detailCardDesciption}>
                     These dates are estimations based on current state turn
                     around times and are subject to change based on state
                     processing.
-                  </div>
+                  </div> */}
                 </DetailCard>
               </div>
             )}

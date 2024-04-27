@@ -104,7 +104,7 @@ const OrderTable = () => {
                     item?.serviceDetails?.name + " form"}
                 </td>
                 <td>{item?.userId?.firstName}</td>
-                <td>{item?.price}$</td>{" "}
+                <td>${item?.price}</td>{" "}
                 <td>{item?.status ? "Paid" : "Not paid"}</td>
                 <td>
                   {item?.orderStatusAdmin?.title

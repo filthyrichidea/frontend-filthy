@@ -701,10 +701,7 @@ function RegisteredServiceForm({ edit }) {
             <div className={styles.amendmentInfo}>
               <h2 className={styles.title}>Change of Agent</h2>
               <Form className={styles.form}>
-                <p>
-                  Do you want us to help you move your Registered Agent service
-                  from your current provider to us?
-                </p>
+                <p>Do you want Filthy Rich Idea to be your Registered Agent?</p>
                 <div className="ms-3 mb-3">
                   <Form.Check
                     inline

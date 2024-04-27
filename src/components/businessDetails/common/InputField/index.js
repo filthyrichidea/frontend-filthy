@@ -15,6 +15,7 @@ const InputField = ({
   disabled,
   error,
   tootltipText,
+  sound = false,
   ...props
 }) => {
   return (
@@ -61,7 +62,7 @@ const InputField = ({
         <label
           className={`inp-type-file ${disabled && "input-type-file-disable"}`}
         >
-          Upload Image/pdf
+          Upload {sound ? "Browse/Choose File" : "Image/pdf"}
           <input
             className="cursor-pointer d-none"
             placeholder={placeholder || ""}

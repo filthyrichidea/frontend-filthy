@@ -183,6 +183,12 @@ function ArticlesOfAmendment() {
           : formData?.agentRegistered === true
           ? true
           : true,
+      agentRegistered2:
+        formData?.agentRegistered2 === false
+          ? false
+          : formData?.agentRegistered2 === true
+          ? true
+          : true,
       ...agentInfo,
       activeTab: formData?.activeTab || 0,
       activeTab2: formData?.activeTab2 || 0,
@@ -786,6 +792,61 @@ function ArticlesOfAmendment() {
                         }
                         type="radio"
                         name="agentRegistered"
+                        className="me-5"
+                      />
+                      {/* <span className="error-message"></span> */}
+                    </div>
+                  </div>
+
+                  <div
+                    className={styles.formCompanyName}
+                    style={{ maxWidth: "100%" }}
+                  >
+                    <div className="d-flex align-items-center justify-content-between">
+                      <p className={styles.subtitle}>
+                        Does this entity own, lease, or have any financial
+                        interest in agricultural land or land capable of being
+                        farmed?
+                      </p>
+                    </div>
+                    <div
+                      className={styles.formInpWrapper}
+                      style={{ marginTop: "5px", marginLeft: "10px" }}
+                    >
+                      <Form.Check
+                        inline
+                        label="Yes"
+                        type="radio"
+                        checked={
+                          formik.values?.agentRegistered2 === true
+                            ? true
+                            : false
+                        }
+                        onChange={() =>
+                          formik.setValues({
+                            ...formik.values,
+                            agentRegistered2: true,
+                          })
+                        }
+                        name="agentRegistered2"
+                        className="me-5"
+                      />
+                      <Form.Check
+                        inline
+                        label="No"
+                        checked={
+                          formik.values?.agentRegistered2 === false
+                            ? true
+                            : false
+                        }
+                        onChange={() =>
+                          formik.setValues({
+                            ...formik.values,
+                            agentRegistered2: false,
+                          })
+                        }
+                        type="radio"
+                        name="agentRegistered2"
                         className="me-5"
                       />
                       {/* <span className="error-message"></span> */}

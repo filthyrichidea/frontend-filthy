@@ -176,9 +176,9 @@ const ViewOrder = () => {
             )}
           </DetailCard>
 
-          <DetailCard title="Feedback To This Form By Admin">
+          <DetailCard>
             <div className="d-flex align-items-center justify-content-between">
-              <h6 className="mt-4">Pricing</h6>
+              {/* <h6 className="mt-4">Pricing</h6> */}
               {!adminFormik.values.edit && (
                 <Button
                   className={styles.customBtn}

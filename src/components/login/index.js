@@ -62,10 +62,10 @@ function LoginPage() {
       <div className={styles.loginLeft}>
         <div className={styles.loginLeftContent}>
           <div className={styles.backBtnWrapper}>
-            <Link to={routes.home} className={styles.backBtn}>
+            <a href={"https://filthyrichidea.com/"} className={styles.backBtn}>
               <BsArrowLeftShort className={styles.icon} />
               Back
-            </Link>
+            </a>
           </div>
           <h2 className={styles.heading}>Sign In To Filthy Rich Idea</h2>
           <Form onSubmit={formik.handleSubmit}>

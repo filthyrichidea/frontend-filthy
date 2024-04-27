@@ -48,7 +48,7 @@ export const AdminFeedBack = async (values, action, id, formData) => {
   try {
     const req = await customAxios.post(`payment/order-update/${id}`, formData)
     if (req.status === 200) {
-      toast.success("Data sended to User")
+      toast.success("Document submitted.")
       action.setValues({ ...values, edit: false, deleteFile: false })
     }
   } catch (e) {
@@ -63,7 +63,7 @@ export const UserFeedBack = async (values, action, id, formData) => {
       formData
     )
     if (req.status === 200) {
-      toast.success("Data sended to Admin")
+      toast.success("Document submitted.")
       action.setValues({ ...values, edit: false, deleteFile: false })
     }
   } catch (e) {
