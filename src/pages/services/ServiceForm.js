@@ -15,13 +15,16 @@ import TrademarkForm from "../../components/services/Trademark/ServiceForm"
 import ReinstatementForm from "../../components/services/Reinstatement/ServiceForm"
 import AnnualReportForm from "../../components/services/AnnualReport/ServiceForm"
 
-import { addItem, addPrice } from "../../_features/cartSlice"
+import { addItem, addPrice, resetCart } from "../../_features/cartSlice"
 import { getServicesSingle } from "../../_features/commonSlice"
 
 function ArticleOfAmendmentPage() {
   const param = useParams().id
   const dispatch = useDispatch()
   useEffect(() => {
+    localStorage.removeItem("orders")
+    localStorage.removeItem("price")
+    dispatch(resetCart())
     dispatch(getServicesSingle(param))
   }, [param])
   const selectedService = useSelector((state) => state.common.selectedService)

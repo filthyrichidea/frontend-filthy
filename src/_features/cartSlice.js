@@ -39,7 +39,7 @@ const cartSlice = createSlice({
           },
         ])
       )
-
+      console.log(action.payload)
       return {
         ...state,
         items: [

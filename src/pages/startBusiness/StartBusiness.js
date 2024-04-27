@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import { Button } from "react-bootstrap"
 import { useDispatch, useSelector } from "react-redux"
 import { useNavigate } from "react-router"
@@ -46,9 +46,9 @@ const StartBusiness = () => {
       package: Yup.string().required("field is required"),
     }),
   })
-  React.useEffect(() => {
-    if (localData && localData2) setShowPopUp(true)
-  }, [])
+  // React.useEffect(() => {
+  //   if (localData && localData2) setShowPopUp(true)
+  // }, [])
 
   React.useEffect(() => {
     if (!userToken) {
@@ -61,6 +61,10 @@ const StartBusiness = () => {
     }
   }, [userToken])
 
+  useEffect(() => {
+    localStorage.removeItem("orders")
+    localStorage.removeItem("price")
+  }, [])
   React.useEffect(() => {
     if (formik.values.entityType?.value && formik.values.state?.value) {
       delete formik.errors["notValid"]
